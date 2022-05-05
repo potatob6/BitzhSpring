@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <script src="${pageContext.request.contextPath}/static/potatob6/js/axios.min.js"></script>
     <script src="${pageContext.request.contextPath}/static/potatob6/js/jquery-3.6.0.min.js"></script>
-    <title>管理图书</title>
+    <title>管理用户</title>
     <style>
         * {
             margin: 0;

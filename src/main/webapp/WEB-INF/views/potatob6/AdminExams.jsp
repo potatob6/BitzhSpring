@@ -259,7 +259,7 @@
     <div id="items_top">
         <div style="width: 20px; flex-shrink: 0"></div>
         <img onclick="window.location.href=${pageContext.request.contextPath}/Admin/" style="width: 22px; height: 22px; flex-shrink: 0" src="${pageContext.request.contextPath}/static/potatob6/svg/return.svg" />
-        <p style="flex-shrink: 1; margin: 0;margin-left: 20px;margin-top: 16px;width: 100%;text-align: center">待处理审核</p>
+        <p style="flex-shrink: 1; margin: 0;margin-left: 20px;margin-top: 16px;width: 100%;text-align: center">所有审核</p>
         <div style="width: 20px; flex-shrink: 0"></div>
     </div>
 

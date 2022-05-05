@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <script src="${pageContext.request.contextPath}/static/potatob6/js/axios.min.js"></script>
     <script src="${pageContext.request.contextPath}/static/potatob6/js/jquery-3.6.0.min.js"></script>
-    <title>管理图书</title>
+    <title>所有管理员</title>
     <style>
         * {
             margin: 0;
@@ -290,7 +290,7 @@
     <div id="items_top">
         <div style="width: 20px; flex-shrink: 0"></div>
         <img onclick="window.location.href=${pageContext.request.contextPath}/Admin/" style="width: 22px; height: 22px; flex-shrink: 0" src="${pageContext.request.contextPath}/static/potatob6/svg/return.svg" />
-        <p style="flex-shrink: 1; margin: 0;margin-left: 20px;margin-top: 16px;width: 100%;text-align: center">图书</p>
+        <p style="flex-shrink: 1; margin: 0;margin-left: 20px;margin-top: 16px;width: 100%;text-align: center">所有管理员</p>
         <div style="width: 20px; flex-shrink: 0"></div>
     </div>
 
