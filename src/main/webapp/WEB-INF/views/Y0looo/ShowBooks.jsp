@@ -22,7 +22,7 @@
                 }
                 var reg = new RegExp("^[A-Za-z0-9\u4e00-\u9fa5]+$");
                 if(!reg.test(bookName)){
-                    alert("请输入中午、数字或英文");
+                    alert("请输入中文、数字或英文");
                     return false;
                 }
                 return true;
@@ -35,11 +35,13 @@
                 }
                 var reg = new RegExp("^[A-Za-z0-9\u4e00-\u9fa5]+$");
                 if(!reg.test(author)){
-                    alert("请输入中午、数字或英文");
+                    alert("请输入中文、数字或英文");
                     return false;
                 }
                 return true;
             }
+
+
         </script>
     </head>
     <body>
@@ -86,7 +88,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary" onclick="return form2Submit();">查询图书</button>
             </form>
-            <table class="table table-hover">
+            <table class="table table-striped">
                 <tr>
                     <th>图书编号</th>
                     <th>图书名称</th>
@@ -106,7 +108,8 @@
                             <td>${book.getStorageCount()}</td>
                             <td>${book.getPrice()}</td>
                             <td>
-                                <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='${pageContext.request.contextPath}/borrow?bookId=${book.getBookId()}'">借阅</button>
+<%--                                <button id="borrow" type="button" class="btn btn-primary btn-lg" onclick="window.location.href='${pageContext.request.contextPath}/borrow?bookId=${book.getBookId()}'">借阅</button>--%>
+                                <button type="button" class="btn btn-primary btn-lg" value="${book.getBookId()}" onclick="borrow(${book.getBookId()})">借阅</button>
                             </td>
                         </tr>
                     </c:forEach>
@@ -114,4 +117,11 @@
             </table>
         </div>
     </body>
+    <script>
+        function borrow(bookId){
+            if(confirm("你确定要借阅吗？")){
+                window.location.href="${pageContext.request.contextPath}/borrow?bookId=" + bookId;
+            }
+        }
+    </script>
 </html>

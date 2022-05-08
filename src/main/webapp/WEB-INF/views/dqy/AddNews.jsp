@@ -31,7 +31,11 @@
                     alert("请填写发布者！");
                     return false;
                 }
-                return true;
+                if(confirm("确定发布新闻？")){
+                    return true;
+                } else {
+                    return false;
+                }
             }
         </script>
     </head>
