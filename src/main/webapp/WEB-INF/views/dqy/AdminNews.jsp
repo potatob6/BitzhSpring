@@ -41,8 +41,9 @@
                         <td colspan="3">${news.getNcreateTime()}</td>
                         <td colspan="3">${news.getTtypeName ()}</td>
                         <td colspan="3">
-                          <button style="background-color: #79aec8; color: #fff" onclick="window.location.href='${pageContext.request.contextPath}/toEditNews?newsId=${news.getNno()}'">编辑</button>
-                          <button style="background-color: #f5dd5d; color: #fff" onclick="window.location.href='${pageContext.request.contextPath}/deleteNews?newsId=${news.getNno()}'">删除</button>
+                            <button style="background-color: #79aec8; color: #fff" onclick="window.location.href='${pageContext.request.contextPath}/toEditNews?newsId=${news.getNno()}'">编辑</button>
+<%--                          <button style="background-color: #f5dd5d; color: #fff" onclick="window.location.href='${pageContext.request.contextPath}/deleteNews?newsId=${news.getNno()}'">删除</button>--%>
+                            <button style="background-color: #f5dd5d; color: #fff" onclick="deleteNews(${news.getNno()})">删除</button>
                         </td>
                       </tr>
                       </c:forEach>
@@ -56,4 +57,11 @@
         </div>
       </div>
     </body>
+    <script>
+        function deleteNews(newsId) {
+            if(confirm("你确定要删除这条新闻吗？")){
+                window.location.href="${pageContext.request.contextPath}/deleteNews?newsId=" + newsId;
+            }
+        }
+    </script>
 </html>

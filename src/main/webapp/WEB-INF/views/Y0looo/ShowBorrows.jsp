@@ -54,12 +54,12 @@
         </div>
         <h2>借阅信息</h2>
         <div>
-            <table class="table table-hover">
+            <table class="table table-striped">
                 <tr>
                     <th>借阅编号</th>
                     <th>图书名称</th>
                     <th>借阅日期</th>
-                    <th>归还期限</th>
+                    <th>归还期限（天）</th>
                     <th>归还日期</th>
                     <th>操作</th>
                 </tr>
@@ -69,11 +69,12 @@
                     <td>${borrow.getBorrowId()}</td>
                     <td>${borrow.getBookName()}</td>
                     <td>${borrow.getBorrowDate()}</td>
-                    <td>${borrow.getTimeLimit()}天</td>
+                    <td>${borrow.getTimeLimit()}</td>
                     <td>${borrow.getReturnDate()}</td>
                 <c:if test="${empty(borrow.getReturnDate())}">
                     <td>
-                        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='${pageContext.request.contextPath}/return?bookId=${borrow.getBookId()}&borrowId=${borrow.getBorrowId()}'">归还</button>
+<%--                        <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='${pageContext.request.contextPath}/return?bookId=${borrow.getBookId()}&borrowId=${borrow.getBorrowId()}'">归还</button>--%>
+                        <button type="button" class="btn btn-primary btn-lg" onclick="returnBook(${borrow.getBookId()},${borrow.getBorrowId()})">归还</button>
                     </td>
                 </c:if>
                 </tr>
@@ -82,4 +83,11 @@
             </table>
         </div>
     </body>
+    <script>
+        function returnBook(bookId,borrowId){
+            if(confirm("你确定要归还吗？")){
+                window.location.href="${pageContext.request.contextPath}/return?bookId=" + bookId + "&borrowId=" + borrowId ;
+            }
+        }
+    </script>
 </html>
