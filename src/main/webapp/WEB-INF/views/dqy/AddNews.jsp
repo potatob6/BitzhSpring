@@ -89,7 +89,7 @@
                                     </select></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="submit" value="提交" name="submit" onclick="return checkNews();"/></td>
+                                    <td><input type="submit" value="发布" name="submit" onclick="return checkNews();"/></td>
                                     <td><input type="reset" value="重置" name="reset"/></td>
                                 </tr>
                             </table>

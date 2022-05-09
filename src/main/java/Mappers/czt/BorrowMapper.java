@@ -17,7 +17,7 @@ public interface BorrowMapper {
      * @param userId
      * @return
      */
-    @Select("select * from borrow,Books where userId=#{userId} and borrow.bookId=Books.bookId")
+    @Select("select * from borrow,Books where userId=#{userId} and borrow.bookId=Books.bookId order by borrowId asc")
     public List<BorrowWithBook> getAllBorrowByUserId(int userId);
 
     /**
@@ -33,7 +33,7 @@ public interface BorrowMapper {
      * @param userId
      * @return
      */
-    @Select("select * from borrow,Books where userId=#{userId} and returnDate is not null and borrow.bookId=Books.bookId")
+    @Select("select * from borrow,Books where userId=#{userId} and returnDate is not null and borrow.bookId=Books.bookId order by borrowId asc")
     public List<BorrowWithBook> getBorrowUserIsReturn(int userId);
 
     /**

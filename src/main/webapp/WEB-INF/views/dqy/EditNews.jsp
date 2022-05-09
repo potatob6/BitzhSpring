@@ -89,7 +89,7 @@
                                     </select></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="submit" value="提交" name="submit" onclick="return checkNews();"/></td>
+                                    <td><input type="submit" value="修改" name="submit" onclick="return checkNews();"/></td>
                                     <td><input type="reset" value="重置" name="reset"/></td>
                                     <td><input type="hidden" name="Nno" value="${news.getNno()}"></td>
                                 </tr>
