@@ -166,17 +166,17 @@
             <hr>
         </div>
         <div id="items">
-            <div class="item" onclick="window.location.href='${pageContext.request.contextPath}/Admin/NotHandled'">
-                <img src="${pageContext.request.contextPath}/static/potatob6/svg/AdminPage1.svg" />
-                <p>查看待办审核</p>
-                <c:if test="${n1 != 0}">
-                    <div class="corner">${n1}</div>
-                </c:if>
-            </div>
-            <div class="item" onclick="window.location.href='${pageContext.request.contextPath}/Admin/Exams'">
-                <img src="${pageContext.request.contextPath}/static/potatob6/svg/AdminPage1.svg" />
-                <p>查看所有的审核</p>
-            </div>
+<%--            <div class="item" onclick="window.location.href='${pageContext.request.contextPath}/Admin/NotHandled'">--%>
+<%--                <img src="${pageContext.request.contextPath}/static/potatob6/svg/AdminPage1.svg" />--%>
+<%--                <p>查看待办审核</p>--%>
+<%--                <c:if test="${n1 != 0}">--%>
+<%--                    <div class="corner">${n1}</div>--%>
+<%--                </c:if>--%>
+<%--            </div>--%>
+<%--            <div class="item" onclick="window.location.href='${pageContext.request.contextPath}/Admin/Exams'">--%>
+<%--                <img src="${pageContext.request.contextPath}/static/potatob6/svg/AdminPage1.svg" />--%>
+<%--                <p>查看所有的审核</p>--%>
+<%--            </div>--%>
             <div class="item" onclick="window.location.href='${pageContext.request.contextPath}/Admin/Admins'">
                 <img src="${pageContext.request.contextPath}/static/potatob6/svg/AdminPage5.svg" />
                 <p>查看所有管理员</p>
