@@ -278,8 +278,8 @@
             <c:forEach var="item" items="${list}">
                 <tr id="trexam${item.borrowId}">
                     <td>${item.borrowId} </td>
-                    <td>${item.bookId} </td>
-                    <td>${item.userId} </td>
+                    <td>${item.book.bookName} </td>
+                    <td>${item.user.userName} </td>
                     <td>${item.borrowDate} </td>
                     <td>${item.timeLimit} </td>
                     <td>${item.returnDate}</td>

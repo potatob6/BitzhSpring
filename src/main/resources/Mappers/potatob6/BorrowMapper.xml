@@ -15,11 +15,26 @@
         delete from borrow where borrowId=#{borrowId}
     </delete>
 
-    <select id="getAllBorrow" resultType="BorrowWithBook">
+    <select id="getAllBorrow" resultMap="BorrowWithInfos">
         select * from borrow;
     </select>
+
+<!--    <select id="getAllBorrowPB" resultMap="BorrowWithInfos">-->
+<!--        select * from borrow;-->
+<!--    </select>-->
 
     <select id="getBorrow" parameterType="Integer" resultType="Borrow">
         select * from borrow where borrowId=#{id}
     </select>
+
+    <resultMap id="BorrowWithInfos" type="PBBorrowWithBook">
+        <id column="borrowId" property="borrowId" />
+        <result column="bookId" property="bookId" />
+        <result column="userId" property="userId" />
+        <result column="borrowDate" property="borrowDate" />
+        <result column="timeLimit" property="timeLimit" />
+        <result column="returnDate" property="returnDate" />
+        <association property="book" column="bookId" select="Mappers.potatob6.BookMapper.getBookById" />
+        <association property="user" column="userId" select="Mappers.potatob6.UserMapper.getUserById" />
+    </resultMap>
 </mapper>
